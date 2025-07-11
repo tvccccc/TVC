@@ -1,0 +1,53 @@
+name: "Let's TVC!"
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/60 * * * *'
+    
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  tvc-full:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.DEPLOY_KEY }}
+          known_hosts: 'github.com'
+      
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          
+      - name: Execute Scripts and Push Changes
+        run: |
+          php get.php
+          php config-test.php
+          php duplicate.php
+          php toSingbox.php
+          php toClashSurfboard.php
+          php get_wireguard.php
+          php wireguard-toSingbox.php
+          php hiddifyWarp.php
+          
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          git remote set-url origin git@github.com:${{ github.repository }}.git
+          
+          git add -A
+          
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "🚀 Servers Updated - $(TZ='Asia/Tehran' date '+%Y-%m-%d %H:%M:%S')"
+            git push
+          else
+            echo "No changes to commit."
+          fi
