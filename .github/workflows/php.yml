@@ -3,8 +3,8 @@ name: "Let's TVC!"
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */2 * * *'
-    
+    - cron: '0 0 * * *'
+
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -21,12 +21,12 @@ jobs:
         with:
           key: ${{ secrets.DEPLOY_KEY }}
           known_hosts: 'github.com'
-      
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '7.4'
-          
+
       - name: Execute Scripts and Push Changes
         run: |
           php get.php
@@ -37,14 +37,14 @@ jobs:
           php get_wireguard.php
           php wireguard-toSingbox.php
           php hiddifyWarp.php
-          
+
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          
+
           git remote set-url origin git@github.com:${{ github.repository }}.git
-          
+
           git add -A
-          
+
           if ! git diff-index --quiet HEAD; then
             git commit -m "🚀 Servers Updated - $(TZ='Asia/Tehran' date '+%Y-%m-%d %H:%M:%S')"
             git push
