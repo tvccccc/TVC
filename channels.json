@@ -1,8 +1,9 @@
 {
-    "EliV2ray": [
+    "Filter_breaker": [
         "vless",
         "trojan",
-        "vmess"
+        "vmess",
+        "ss"
     ],
     "IP_CF_Configs": [
         "vmess",
