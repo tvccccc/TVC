@@ -42,3 +42,4 @@ This project is licensed under the AGPL-3.0 license - see the LICENSE file for d
 ## Add this subs and other telegram subs
 
 - bot : @subcr_robot
+- va inke havasam be time build shodanesh bashe mitonm ta 35 min faghat threshold bezarm bara buildesh va inke ham sub ham channels
