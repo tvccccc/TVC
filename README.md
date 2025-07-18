@@ -38,3 +38,7 @@ To use this project, simply import the subscription links into your preferred cl
 ## License
 
 This project is licensed under the AGPL-3.0 license - see the LICENSE file for details.
+
+## Add this subs and other telegram subs
+
+- bot : @subcr_robot
