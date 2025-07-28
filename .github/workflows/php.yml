@@ -29,6 +29,10 @@ jobs:
 
       - name: Execute Scripts and Push Changes
         run: |
+          echo "--- RAM Usage Before Scripts---"
+          free -h
+          echo "--------------------------------"
+
           php get.php
           php config-test.php
           php duplicate.php
@@ -37,6 +41,10 @@ jobs:
           php get_wireguard.php
           php wireguard-toSingbox.php
           php hiddifyWarp.php
+
+          echo "---RAM Usage After Scripts---"
+          free -h
+          echo "-----------------------------"
 
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
