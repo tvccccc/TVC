@@ -19,13 +19,13 @@ jobs:
       - name: Install SSH Key
         uses: shimataro/ssh-key-action@v2
         with:
-          key: ${{ secrets.DEPLOY_KEY }}
-          known_hosts: 'github.com'
+           key: ${{ secrets.DEPLOY_KEY }}
+           known_hosts: 'github.com'
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '7.4'
+           php-version: '7.4'
 
       - name: Execute Scripts and Push Changes
         run: |
@@ -52,9 +52,9 @@ jobs:
           git remote set-url origin git@github.com:${{ github.repository }}.git
 
           git add -A
-
-          if ! git diff-index --quiet HEAD; then
-            git commit -m "🚀 Servers Updated - $(TZ='Asia/Tehran' date '+%Y-%m-%d %H:%M:%S')"
+          
+          if ! git diff-index --quiet HEAD || [[ $(date -u +'%w') == 0 ]]; then
+            git commit --allow-empty -m "🚀 Servers Updated - $(TZ='Asia/Tehran' date '+%Y-%m-%d %H:%M:%S')"
             git push
           else
             echo "No changes to commit."
