@@ -113,7 +113,10 @@
                 "BB|11|Type 0",
                 "BB|12|Type 0",
                 "BB|13|Type 0",
-                "BB|14|Type 0"
+                "BB|14|Type 0",
+                "BB|15|Type 0",
+                "BB|16|Type 0",
+                "BB|17|Type 0"
             ]
         },
         {
@@ -133,7 +136,10 @@
                 "BB|11|Type 0",
                 "BB|12|Type 0",
                 "BB|13|Type 0",
-                "BB|14|Type 0"
+                "BB|14|Type 0",
+                "BB|15|Type 0",
+                "BB|16|Type 0",
+                "BB|17|Type 0"
             ],
             "url": "http://cp.cloudflare.com",
             "interval": "3m",
@@ -157,6 +163,66 @@
         },
         {
             "type": "wireguard",
+            "private_key": "WCCCuvpftPBQVOPeb9MmwQLVBXi8Mm6WMjOoFTwNAGI=",
+            "server": "188.114.99.182",
+            "server_port": 987,
+            "local_address": [
+                "172.16.0.2/32"
+            ],
+            "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "reserved": [
+                204,
+                71,
+                202
+            ],
+            "mtu": 1280,
+            "tag": "BB|1|Type 0",
+            "fake_packets": "1-3",
+            "fake_packets_size": "1-10",
+            "fake_packets_delay": "1-10"
+        },
+        {
+            "type": "wireguard",
+            "private_key": "kFg07LdfkM4Cmd1uL7Egtxa/pjYTEwNgGRww6q9Hj20=",
+            "server": "188.114.99.126",
+            "server_port": 1018,
+            "local_address": [
+                "172.16.0.2/32"
+            ],
+            "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "reserved": [
+                67,
+                10,
+                249
+            ],
+            "mtu": 1280,
+            "tag": "BB|2|Type 0",
+            "fake_packets": "1-3",
+            "fake_packets_size": "1-10",
+            "fake_packets_delay": "1-10"
+        },
+        {
+            "type": "wireguard",
+            "private_key": "kE4K61oOG/oSg79M4zztv9JU8kmG1ys18PbKSHSxBmY=",
+            "server": "188.114.97.188",
+            "server_port": 943,
+            "local_address": [
+                "172.16.0.2/32"
+            ],
+            "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "reserved": [
+                63,
+                204,
+                158
+            ],
+            "mtu": 1280,
+            "tag": "BB|3|Type 0",
+            "fake_packets": "1-3",
+            "fake_packets_size": "1-10",
+            "fake_packets_delay": "1-10"
+        },
+        {
+            "type": "wireguard",
             "private_key": "YIEzkWkV+8KKDuE7X5D9lDd9V8WRaxHWyhZP0Wx6GlE=",
             "server": "188.114.97.13",
             "server_port": 955,
@@ -170,7 +236,7 @@
                 15
             ],
             "mtu": 1280,
-            "tag": "BB|1|Type 0",
+            "tag": "BB|4|Type 0",
             "fake_packets": "1-3",
             "fake_packets_size": "1-10",
             "fake_packets_delay": "1-10"
@@ -190,7 +256,7 @@
                 60
             ],
             "mtu": 1280,
-            "tag": "BB|2|Type 0",
+            "tag": "BB|5|Type 0",
             "fake_packets": "1-3",
             "fake_packets_size": "1-10",
             "fake_packets_delay": "1-10"
@@ -210,7 +276,7 @@
                 35
             ],
             "mtu": 1280,
-            "tag": "BB|3|Type 0",
+            "tag": "BB|6|Type 0",
             "fake_packets": "1-3",
             "fake_packets_size": "1-10",
             "fake_packets_delay": "1-10"
@@ -230,7 +296,7 @@
                 77
             ],
             "mtu": 1280,
-            "tag": "BB|4|Type 0",
+            "tag": "BB|7|Type 0",
             "fake_packets": "1-3",
             "fake_packets_size": "1-10",
             "fake_packets_delay": "1-10"
@@ -250,7 +316,7 @@
                 118
             ],
             "mtu": 1280,
-            "tag": "BB|5|Type 0",
+            "tag": "BB|8|Type 0",
             "fake_packets": "1-3",
             "fake_packets_size": "1-10",
             "fake_packets_delay": "1-10"
@@ -270,7 +336,7 @@
                 89
             ],
             "mtu": 1280,
-            "tag": "BB|6|Type 0",
+            "tag": "BB|9|Type 0",
             "fake_packets": "1-3",
             "fake_packets_size": "1-10",
             "fake_packets_delay": "1-10"
@@ -290,7 +356,7 @@
                 174
             ],
             "mtu": 1280,
-            "tag": "BB|7|Type 0",
+            "tag": "BB|10|Type 0",
             "fake_packets": "1-3",
             "fake_packets_size": "1-10",
             "fake_packets_delay": "1-10"
@@ -310,7 +376,7 @@
                 238
             ],
             "mtu": 1280,
-            "tag": "BB|8|Type 0",
+            "tag": "BB|11|Type 0",
             "fake_packets": "1-3",
             "fake_packets_size": "1-10",
             "fake_packets_delay": "1-10"
@@ -330,7 +396,7 @@
                 39
             ],
             "mtu": 1280,
-            "tag": "BB|9|Type 0",
+            "tag": "BB|12|Type 0",
             "fake_packets": "1-3",
             "fake_packets_size": "1-10",
             "fake_packets_delay": "1-10"
@@ -350,7 +416,7 @@
                 168
             ],
             "mtu": 1280,
-            "tag": "BB|10|Type 0",
+            "tag": "BB|13|Type 0",
             "fake_packets": "1-3",
             "fake_packets_size": "1-10",
             "fake_packets_delay": "1-10"
@@ -370,7 +436,7 @@
                 179
             ],
             "mtu": 1280,
-            "tag": "BB|11|Type 0",
+            "tag": "BB|14|Type 0",
             "fake_packets": "1-3",
             "fake_packets_size": "1-10",
             "fake_packets_delay": "1-10"
@@ -390,7 +456,7 @@
                 85
             ],
             "mtu": 1280,
-            "tag": "BB|12|Type 0",
+            "tag": "BB|15|Type 0",
             "fake_packets": "1-3",
             "fake_packets_size": "1-10",
             "fake_packets_delay": "1-10"
@@ -410,7 +476,7 @@
                 107
             ],
             "mtu": 1280,
-            "tag": "BB|13|Type 0",
+            "tag": "BB|16|Type 0",
             "fake_packets": "1-3",
             "fake_packets_size": "1-10",
             "fake_packets_delay": "1-10"
@@ -430,7 +496,7 @@
                 250
             ],
             "mtu": 1280,
-            "tag": "BB|14|Type 0",
+            "tag": "BB|17|Type 0",
             "fake_packets": "1-3",
             "fake_packets_size": "1-10",
             "fake_packets_delay": "1-10"
